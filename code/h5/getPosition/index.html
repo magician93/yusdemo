@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>getCurrentPosition</title>
+	<script type="text/javascript">
+	window.onload = function(){
+		var weidu = document.getElementById("weidu");
+		var jingdu = document.getElementById("jingdu");
+		var precision = document.getElementById("precision");
+		navigator.geolocation.getCurrentPosition(function(pos){
+			var w = pos.coords.latitude;
+			var j = pos.coords.longitude;
+			var p = pos.coords.accuracy;
+alert('fjds');
+			weidu.html = w;
+			jingdu.html = j;
+			precision.html = p;
+
+		});
+	alert(precision);
+	precision.innerHTML = "sss";
+	}
+
+	</script>
+</head>
+<body>
+	<div id="weidu">w</div>
+	<div id="jingdu">j</div>
+	<div id="precision">precision</div>
+</body>
+</html>
