@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link href="assets/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/themes/skyd.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+        
+	<script type="text/javascript" src="assets/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/jquery.mobile-1.4.5.min.js"></script>
+	<title>流量充值</title>
+</head>
+<body>
+    
+<div data-role="page" data-theme="a" id="flow">
+	<div data-role="header" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="charge.html"  data-transition="fade" >充话费</a></li>
+				<li><a class="ui-btn-active" href="">充流量</a></li>
+			</ul>
+		</div>
+	</div>
+	<div data-role="content">
+                <div class="qiehuan"><a href="flow_grid.html" class="ui-btn-left ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow ui-corner-all" data-role="button" role="button"></a></div>
+            <h3 class="center underline-blue">流量充值<input style="" type="tel" placeholder="请输入手机号码"/></h3>
+            <div class="charge-list">
+		<ul data-role="listview" style="margin-top:25px;">
+                    <li><a href="chongzhi.html" class="center li-bgcolor-1"><span class="yuanjia-li">20M</span><span class="xianjia-li">售价3.00元</span></a></li>
+                    <li><a href="chongzhi.html" class="center li-bgcolor-2"><span class="yuanjia-li">50M</span><span class="xianjia-li">售价6.00元</span></a></li>
+                    <li><a href="chongzhi.html" class="center li-bgcolor-3"><span class="yuanjia-li">100M</span><span class="xianjia-li">售价10.00元</span></a></li>
+                    <li><a href="chongzhi.html" class="center li-bgcolor-4"><span class="yuanjia-li">200M</span><span class="xianjia-li">售价15.00元</span></a></li>
+                    <li><a href="chongzhi.html" class="center li-bgcolor-5"><span class="yuanjia-li">500M</span><span class="xianjia-li">售价30.00元</span></a></li>
+                    <li><a href="chongzhi.html" class="center li-bgcolor-6"><span class="yuanjia-li">1000M</span><span class="xianjia-li">售价100.00元</span></a></li>
+		</ul>
+            </div>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a class="ui-btn-active" href="history.html">我的充值记录</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+    
+
+</body>
+</html>

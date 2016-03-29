@@ -1,0 +1,71 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-3-29, 20:24:16
+    Author     : MAGY
+*/
+
+.noicon ::after{
+    display: none;
+}
+.myButton{
+    background-color: #3388cc !important;
+    color: #fff !important;
+}
+.center{
+    text-align: center !important;
+}
+.underline-blue{
+    border-bottom: #3388cc solid 1px;
+}
+.yuanjia-li{
+    /*background-color: #45dafb;*/
+    color: #3c8696;
+}
+.xianjia-li{
+    position: initial;
+    margin-left: 20px;
+    margin-top: 8px;
+    color: #ff6c6c;
+    font-size: 12px;
+}
+.xianjia-grid{
+    position: initial;
+    color: #ff6c6c;
+    font-size: 12px;
+}
+.charge-list li{
+    height: 58px;
+}
+.font-white{
+    color:#fff;
+}
+
+/*li-color*/
+.li-bgcolor-1{
+    background-color: #45dafb !important;
+}
+.li-bgcolor-2{
+    background-color: #fbcc45 !important;
+}
+.li-bgcolor-3{
+    background-color: #45fb54 !important;
+}
+.li-bgcolor-4{
+    background-color: #fffd50 !important;
+}
+.li-bgcolor-5{
+    background-color: #45f5fb !important;
+}
+.li-bgcolor-6{
+    background-color: #69febe !important;
+}
+
+
+.qiehuan{
+    position: fixed;
+    z-index: 999;
+}
