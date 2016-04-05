@@ -1,52 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link href="assets/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
-	<link href="assets/themes/skyd.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/css/style.css">
-        
-	<script type="text/javascript" src="assets/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/jquery.mobile-1.4.5.min.js"></script>
-	<title>流量充值</title>
-</head>
-<body>
-    
-<div data-role="page" data-theme="a" id="flow">
-	<div data-role="header" data-position="fixed">
-		<div data-role="navbar">
-			<ul>
-				<li><a href="charge.html"  data-transition="fade" >充话费</a></li>
-				<li><a class="ui-btn-active" href="">充流量</a></li>
-			</ul>
-		</div>
-	</div>
-	<div data-role="content">
-                <div class="qiehuan"><a href="flow_grid.html" class="ui-btn-left ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow ui-corner-all" data-role="button" role="button"></a></div>
-            <h3 class="center underline-blue">流量充值<input style="" type="tel" placeholder="请输入手机号码"/></h3>
-            <div class="charge-list">
-		<ul data-role="listview" style="margin-top:25px;">
-                    <li><a href="chongzhi.html" class="center li-bgcolor-1"><span class="yuanjia-li">20M</span><span class="xianjia-li">售价3.00元</span></a></li>
-                    <li><a href="chongzhi.html" class="center li-bgcolor-2"><span class="yuanjia-li">50M</span><span class="xianjia-li">售价6.00元</span></a></li>
-                    <li><a href="chongzhi.html" class="center li-bgcolor-3"><span class="yuanjia-li">100M</span><span class="xianjia-li">售价10.00元</span></a></li>
-                    <li><a href="chongzhi.html" class="center li-bgcolor-4"><span class="yuanjia-li">200M</span><span class="xianjia-li">售价15.00元</span></a></li>
-                    <li><a href="chongzhi.html" class="center li-bgcolor-5"><span class="yuanjia-li">500M</span><span class="xianjia-li">售价30.00元</span></a></li>
-                    <li><a href="chongzhi.html" class="center li-bgcolor-6"><span class="yuanjia-li">1000M</span><span class="xianjia-li">售价100.00元</span></a></li>
-		</ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="assets/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/themes/skyd.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <script type="text/javascript" src="assets/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="assets/script.js"></script>
+        <title>流量充值</title>
+    </head>
+    <body>
+
+        <div data-role="page" data-theme="a" id="flow">
+
+            <!-- panel -->
+            <div id="left-panel" data-role="panel" data-theme="b">
+                <a class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-right ui-btn-right ui-btn-icon-notext" href="#" data-rel="close"></a>
+               <dl>
+                    <dt>充值未到账怎么办</dt>
+                    <dd>月末、月初为充值高峰时段，到账时间可能会有延迟，建议您先拨打运营商电话查询(移动10086、联通10010、电信10000)，若查实未到账，系统会自动进行补充或退款处理。<dd>
+                        
+                    <dt>充值失败原因及退款处理周期</dt>
+                    <dd>如遇充值高峰或系统升级，会有个别订单充值失败，系统会自动监测并安排退款，退款处理周期约7个工作日，款项将根据付款的支付方式原路退回。<dd>
+                        
+                    <dt>充值成功是否可以退款</dt>
+                    <dd>手机充值成功后，是无法退款的。如果您不慎输错了号码，建议您尝试联系手机号码主人协商退回资金。</dd>
+                    
+                    <dt>手机充值和营业厅充值有何不同</dt>
+                    <dd>手机充值不参加当地运营商活动，发票请在充值到账后到运营商营业厅领取</dd>
+                    
+                    <dt>客服联系方式</dt>
+                    <dd>微信公众号：balala</dd>
+                    <dd>客服电话：400-811-2580</dd>
+                    <dd>服务时间：10:00-18:00</dd>
+                </dl>
             </div>
-	</div>
-	<div data-role="footer" data-position="fixed">
-		<div data-role="navbar">
-			<ul>
-				<li><a class="ui-btn-active" href="history.html">我的充值记录</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
 
-    
+            <div data-role="header" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="charge.html"  data-transition="fade" >充话费</a></li>
+                        <li><a class="ui-btn-active" href="">充流量</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="content">
+                <div class="notice_btn">
+                    <!-- 呼出侧边栏 -->
+                    <a href="#left-panel" class="ui-btn ui-icon-carat-r ui-btn-icon-notext ui-shadow ui-corner-all">ss</a>
+                </div>
+                <div class="qiehuan"><a href="flow_grid.html" class="ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow ui-corner-all" data-role="button" role="button"></a></div>
+                
+                <h3 class="center underline-blue">流量充值<input style="" type="tel" placeholder="请输入手机号码"/></h3>
+                <div class="charge-list">
+                    <ul data-role="listview" style="margin-top:25px;">
+                        <li><a href="chongzhi.html" class="center li-bgcolor-1"><span class="yuanjia-li">20M</span><span class="xianjia-li">售价3.00元</span></a></li>
+                        <li><a href="chongzhi.html" class="center li-bgcolor-2"><span class="yuanjia-li">50M</span><span class="xianjia-li">售价6.00元</span></a></li>
+                        <li><a href="chongzhi.html" class="center li-bgcolor-3"><span class="yuanjia-li">100M</span><span class="xianjia-li">售价10.00元</span></a></li>
+                        <li><a href="chongzhi.html" class="center li-bgcolor-4"><span class="yuanjia-li">200M</span><span class="xianjia-li">售价15.00元</span></a></li>
+                        <li><a href="chongzhi.html" class="center li-bgcolor-5"><span class="yuanjia-li">500M</span><span class="xianjia-li">售价30.00元</span></a></li>
+                        <li><a href="chongzhi.html" class="center li-bgcolor-6"><span class="yuanjia-li">1000M</span><span class="xianjia-li">售价100.00元</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a class="ui-btn-active" href="history.html">我的充值记录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-</body>
+
+
+    </body>
 </html>

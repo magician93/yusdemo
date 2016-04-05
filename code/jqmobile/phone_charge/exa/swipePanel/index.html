@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="../../assets/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/themes/skyd.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../../assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../assets/css/style.css">
+        <style>
+            /* Swipe works with mouse as well but often causes text selection. */
+            /* We'll deny text selecton on everything but INPUTs and TEXTAREAs. */
+            #demo-page :not(INPUT):not(TEXTAREA) {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+            }
+
+        </style>
+
+        <script type="text/javascript" src="../../assets/jquery.min.js"></script>
+        <script type="text/javascript" src="../../assets/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript">
+            $(document).on("pagecreate", "#demo-page", function () {
+                $(document).on("swipeleft swiperight", "#demo-page", function (e) {
+                    // We check if there is no open panel on the page because otherwise
+                    // a swipe to close the left panel would also open the right panel (and v.v.).
+                    // We do this by checking the data that the framework stores on the page element (panel: open).
+                    if ($(".ui-page-active").jqmData("panel") !== "open") {
+                        if (e.type === "swipeleft") {
+                            $("#right-panel").panel("open");
+                        } else if (e.type === "swiperight") {
+                            $("#left-panel").panel("open");
+                        }
+                    }
+                });
+            });
+
+        </script>
+        <title>swipe-panel</title>
+    </head>
+    <body>
+        <div id="demo-page" data-role="page" data-url="demo-page">
+            <div data-role="header" data-theme="b">
+                <h1>Swipe left or right</h1>
+                <a class="ui-nodisc-icon" href="#left-panel" data-icon="carat-r" data-iconpos="notext" data-iconshadow="false" data-shadow="false">Open left panel</a>
+                <a class="ui-nodisc-icon" href="#right-panel" data-icon="carat-l" data-iconpos="notext" data-iconshadow="false" data-shadow="false">Open right panel</a>
+            </div><!-- /header -->
+            <div class="ui-content" role="main">
+
+            </div><!-- /content -->
+            <div id="left-panel" data-role="panel" data-theme="b">
+                <p>Left reveal panel.</p>
+                <a class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right" href="#" data-rel="close">Close</a>
+            </div><!-- /panel -->
+            <div id="right-panel" data-role="panel" data-theme="b" data-display="push" data-position="right">
+                <p>Right push panel.</p>
+                <a class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-right" href="#" data-rel="close">Close</a>
+            </div><!-- /panel -->
+        </div>
+
+
+    </body>
+</html>
